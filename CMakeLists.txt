@@ -9,7 +9,14 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # exe
 set(EXE_NAME "logic-gate-sim")
-add_executable(${EXE_NAME} ${PROJECT_SOURCE_DIR}/src/main.cpp)
+add_executable(${EXE_NAME} 
+    ${PROJECT_SOURCE_DIR}/src/main.cpp
+    ${PROJECT_SOURCE_DIR}/src/logic/Component.cpp
+    ${PROJECT_SOURCE_DIR}/src/logic/ComponentManager.cpp
+    ${PROJECT_SOURCE_DIR}/src/logic/Gate.cpp
+    ${PROJECT_SOURCE_DIR}/src/logic/Slot.cpp
+    ${PROJECT_SOURCE_DIR}/src/ui/ComponentMenu.cpp
+)
 
 # dependencies
 add_subdirectory(${PROJECT_SOURCE_DIR}/ext/sfml)
